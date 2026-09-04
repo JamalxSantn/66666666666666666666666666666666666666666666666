@@ -1649,5 +1649,5 @@ class WhitelistModal(discord.ui.Modal):
 
 
 
-DISCORD_TOKEN = "MTM2MTY0NzUxNDY5MTgyOTc4MA.GQzU3v.QYISgX6IpsM2ta2pj616ASMDvw3UuzVB2UOCWs"
+DISCORD_TOKEN = os.environ.get("DISCORD_TOKEN", "")
 bot.run(DISCORD_TOKEN)
