@@ -505,7 +505,7 @@ async def deletekey(ctx, *, key: str):
     conn = sqlite3.connect(DATABASE)
     c = conn.cursor()
     
-    if key == "all":
+    if key == "ALL":
         c.execute("SELECT COUNT(*) FROM keys")
         count = c.fetchone()[0]
         if count == 0:
