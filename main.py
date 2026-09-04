@@ -604,7 +604,7 @@ async def check(ctx, discord_id: str = None):
         except:
             created_readable = created_at
         embed = discord.Embed(title="User Informationen", color=0xffffff)
-        embed.set_thumbnail(url="FACE_LOGO_URL")
+        embed.set_thumbnail(url=FACE_LOGO_URL)
         embed.add_field(name="Discord User", value=discord_name, inline=False)
         embed.add_field(name="Discord ID", value=discord_id, inline=True)
         embed.add_field(name="Key", value=f"`{key}`", inline=True)
@@ -1034,7 +1034,7 @@ async def post_user_check_embed_start():
                     title="🔍 User Prüfen",
                     color=0x000000
                 )
-                user_check_embed.set_thumbnail(url="FACE_LOGO_URL")
+                user_check_embed.set_thumbnail(url=FACE_LOGO_URL)
                 user_check_embed.add_field(name="Was du sehen kannst", value="> Gib eine Discord ID ein und erhalte:\n> Key, HWID, Erstellt von/wann, Ablauf, Logins im Loader", inline=False)
                 user_check_embed.set_footer(text="F I STEINKE C++ MEISTER")
                 await channel.send(embed=user_check_embed, view=UserCheckView())
@@ -1054,7 +1054,7 @@ def build_keys_overview_embed():
         color=0x000000,
         timestamp=datetime.now()
     )
-    embed.set_thumbnail(url="FACE_LOGO_URL")
+    embed.set_thumbnail(url=FACE_LOGO_URL)
 
     if not rows:
         embed.description = "> Keine Keys vorhanden."
@@ -1087,7 +1087,7 @@ def build_keys_overview_embed():
     for i, e in enumerate(embeds):
         e.set_footer(text=f"F I STEINKE C++ MEISTER")
         if i > 0:
-            e.set_thumbnail(url="FACE_LOGO_URL")
+            e.set_thumbnail(url=FACE_LOGO_URL)
 
     return embeds
 
@@ -1159,7 +1159,7 @@ def build_bot_status_embed():
     conn.close()
 
     embed = discord.Embed(title="FACE Status", color=0x000000, timestamp=datetime.now())
-    embed.set_thumbnail(url="FACE_LOGO_URL")
+    embed.set_thumbnail(url=FACE_LOGO_URL)
 
     bot_status = f"Online als {bot.user}"
     embed.add_field(name="Bot", value=bot_status, inline=False)
@@ -1508,7 +1508,7 @@ async def post_whitelist_embed_start():
                     title="📋 Whitelist Verwaltung",
                     color=0x000000
                 )
-                whitelist_embed.set_thumbnail(url="FACE_LOGO_URL")
+                whitelist_embed.set_thumbnail(url=FACE_LOGO_URL)
                 whitelist_embed.add_field(name="➕ Add Whitelist", value="> Füge einen User hinzu", inline=True)
                 whitelist_embed.add_field(name="➖ Remove Whitelist", value="> Entferne einen User", inline=True)
                 whitelist_embed.add_field(name="📋 Whitelist", value="> Zeige alle Whitelist Users", inline=True)
@@ -1533,7 +1533,7 @@ async def post_whitelist_embed_loop():
                         title="📋 Whitelist Verwaltung",
                         color=0x000000
                     )
-                    whitelist_embed.set_thumbnail(url="FACE_LOGO_URL")
+                    whitelist_embed.set_thumbnail(url=FACE_LOGO_URL)
                     whitelist_embed.add_field(name="👑 Add Master", value="> Füge einen Master hinzu", inline=True)
                     whitelist_embed.add_field(name="➕ Add Whitelist", value="> Füge einen User hinzu", inline=True)
                     whitelist_embed.add_field(name="➖ Remove Whitelist", value="> Entferne einen User", inline=True)
