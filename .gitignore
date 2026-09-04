@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.pyo
+keys.db
+ticket_data.json
+.env
+*.log
